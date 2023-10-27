@@ -31,12 +31,28 @@
     transition: 0.2s;
 }
 
-.social a:hover{
-    color: rgb(38,54,115);
+.social a#li:hover{
+    /* color: rgb(38,54,115); */
+    color: #0072b1;
+}
+.social a#gh:hover{
+    /* color: rgb(38,54,115); */
+    color: #2b3137;
+}
+.social a#in:hover{
+    /* color: rgb(38,54,115); */
+    color: #d62976;
+}
+
+.contact a#wa:hover{
+    color: #25d366;
+}
+.contact a#ma:hover{
+    color: #4285F4;
 }
 
 .exp{
-    width: 250px;
+    width: 300px;
     justify-content: space-evenly;
 }
 
@@ -59,6 +75,9 @@
         justify-content: space-evenly;
         height: 200px;
         width: 200px !important;
+    }
+    .contact .other{
+        width:180px;
     }
 }
 
@@ -159,7 +178,8 @@
     width: auto;
 }
 .projects .card{ 
-    height: 150px;
+    height: 200px;
+    /* width: 500px; */
     margin: 10px;
     color: black;
     overflow: hidden;
