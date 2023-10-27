@@ -14,6 +14,37 @@ export class DataService{
           desc: 'MEAN stack application',
           link: 'https://github.com/lavneesh27/scholarship-portal',
         },
+        {
+            title: 'Scholarship Portal',
+            desc: 'MEAN stack application',
+            link: 'https://github.com/lavneesh27/scholarship-portal',
+          },
+          {
+            title: 'Scholarship Portal',
+            desc: 'MEAN stack application',
+            link: 'https://github.com/lavneesh27/scholarship-portal',
+          },
+          {
+            title: 'Scholarship Portal',
+            desc: 'MEAN stack application',
+            link: 'https://github.com/lavneesh27/scholarship-portal',
+          },
+          {
+            title: 'Scholarship Portal',
+            desc: 'MEAN stack application',
+            link: 'https://github.com/lavneesh27/scholarship-portal',
+          },
+          {
+            title: 'Scholarship Portal',
+            desc: 'MEAN stack application',
+            link: 'https://github.com/lavneesh27/scholarship-portal',
+          },
+          {
+            title: 'Scholarship Portal',
+            desc: 'MEAN stack application',
+            link: 'https://github.com/lavneesh27/scholarship-portal',
+          },
+        
       ];
 
       data: data = {
