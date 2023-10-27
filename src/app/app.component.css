@@ -1,0 +1,221 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+
+.img-container{
+    border: 3px solid rgb(38,54,115);
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.img-container img{
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+}
+
+.social{
+    justify-content: space-evenly;
+    width: 120px;
+}
+
+.social a{
+    text-decoration: none;
+    color: black;
+    opacity: 70%;
+    transition: 0.2s;
+}
+
+.social a:hover{
+    color: rgb(38,54,115);
+}
+
+.exp{
+    width: 400px;
+    justify-content: space-evenly;
+}
+.exp .work{
+    width: 80px;
+}
+.exp .work small{
+    font-weight: 500;
+}
+
+.contact{
+    justify-content: space-evenly;
+    display: flex;
+    width: 350px;
+    align-items: center;
+}
+
+.contact .download{ 
+    background-color: rgb(38,54,115);
+    border: none;
+    width: 200px;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    transition:0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+}
+
+.contact .download:hover{ 
+    background-color: rgb(30, 42, 92);
+}
+
+
+.contact .other{ 
+    height: 40px !important;
+    background-color: rgb(233,234,236);
+    border: none;
+    color: black;
+    transition: 0.2s;
+}
+
+.contact .other:hover{ 
+    background-color: rgb(190, 192, 196);
+}
+
+.night a{
+    color:black;
+    text-decoration: none;
+    cursor:pointer;
+    transition: 0.2s;
+}
+
+.night a:hover{
+    color:rgb(30, 42, 92);
+}
+
+.switch{
+    width: 325px;
+    border: none;
+    border-radius: 15px;
+    padding: 6px;
+    background-color: rgb(233,234,236);
+    transition: 0.2s;
+}
+
+.switch .btn{
+    border: none;
+    color: black;
+    height: 50px;
+    border-radius: 15px;
+    background-color: rgb(233,234,236);
+    font-size: 15px;
+}
+.btn-group.switch input[type="radio"]:checked + label {
+    background-color: white;
+    color: black;
+  }
+  .btn-group.switch input[type="radio"] + label{
+    transition: 0.2s;
+  }
+  .btn-group.switch input[type="radio"]:hover + label {
+    background-color: white;
+    color: black;
+  }
+.projects{
+    width: 800px;
+}
+.projects .card{
+    width: auto;    
+    height: 150px;
+    margin: 10px;
+    color: black;
+    overflow: hidden;
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    transition: transform 0.2s;
+    
+}
+.projects img{
+    width: 100%;
+    height: 100%;   
+    z-index: 1;
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient(black, transparent);
+    transition: all 2s ease;
+}
+
+.projects article{
+    z-index: 1;
+    position: absolute;
+	bottom: 0;
+    transition: all 0.5s ease;
+}
+
+.projects:hover article {
+	transform: translate(2px, -69px);
+}
+
+.projects:hover img {
+	opacity: 0.6;
+	transform: scale(1.1);
+}
+
+.projects .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+   
+  }
+
+  .projects .link{
+    background-color: rgb(38,54,115);
+	position: absolute;
+    align-items: center;
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	z-index: 1;
+    opacity: 0;
+	transform: translate(0px, 70px);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  .projects:hover .link{
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+  .link a{
+	font-size: 30px;
+	color: #fff;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+    text-decoration: none;
+    
+	/* top: 13px; */
+}
+
+.skills{
+    width: 800px;
+}
+
+.skills .col{
+    width: 300px;
+    margin: 10px;
+    overflow: hidden;
+}
+.skills i{
+    color: rgb(30, 42, 92);
+}
+footer{
+    /* bottom: 5px; */
+    position:absolute;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    display: block;
+    text-align: center;
+    font-size: smaller;
+    opacity: 50%;
+    width: 100%;
+}
