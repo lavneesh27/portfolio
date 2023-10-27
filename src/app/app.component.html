@@ -1,111 +1,110 @@
-<div class="dark">
-  <nav class="navbar navbar-expand-lg">
-    <div class="container my-3 night">
-      <a (click)="toggleDark()"><i [ngClass]="isDark?'ri-sun-line':'ri-moon-line'"></i></a>
+<nav class="navbar navbar-expand-lg">
+  <div class="container my-3 night">
+    <a (click)="toggleDark()"><i [ngClass]="isDark?'ri-sun-line':'ri-moon-line'"></i></a>
+  </div>
+</nav>
+
+<div class="container d-flex flex-column align-items-center text-center mb-4">
+  <div class="img-container mb-3">
+    <img src="../assets/images/avatar.png" alt="">
+  </div>
+  <h4 class="fw-bold">{{data.name}}</h4>
+  <small class="fw-bolder opacity-50 mb-4">{{data.designation}}</small>
+
+  <div class="social d-flex mb-4">
+    <a href="{{data?.linkedIn}}"><i class="ri-linkedin-box-line fs-5"></i></a>
+    <a href="{{data?.github}}"><i class="ri-github-line fs-5"></i></a>
+    <a href="{{data.instagram}}"><i class="ri-instagram-line fs-5"></i></a>
+  </div>
+
+  <div class="exp d-flex mb-4">
+    <div class="work d-flex flex-column text-center">
+      <h6 class="fw-bolder">{{data.work}}</h6>
+      <small class="fs-7 text-muted">Months of
+        work</small>
     </div>
-  </nav>
-  <div class="container d-flex flex-column align-items-center mb-4">
-    <div class="img-container mb-3">
-      <img src="../assets/images/avatar.png" alt="">
+    <div class="work d-flex flex-column text-center">
+      <h6 class="fw-bolder">+{{data.project}}</h6>
+      <small class="fs-7 text-muted">Completed Project</small>
     </div>
-    <h4 class="fw-bold">{{data.name}}</h4>
-    <small class="fw-bolder opacity-50 mb-4">{{data.designation}}</small>
-
-    <div class="social d-flex mb-4">
-      <a href="{{data?.linkedIn}}"><i class="ri-linkedin-box-line fs-5"></i></a>
-      <a href="{{data?.github}}"><i class="ri-github-line fs-5"></i></a>
-      <a href="{{data.instagram}}"><i class="ri-instagram-line fs-5"></i></a>
+    <div class="work d-flex flex-column text-center">
+      <h6 class="fw-bolder">{{data.certificate}}</h6>
+      <small class="fs-7 text-muted">Number of certificates</small>
     </div>
+  </div>
 
-    <div class="exp d-flex mb-4">
-      <div class="work d-flex flex-column text-center">
-        <h6 class="fw-bolder">{{data.work}}</h6>
-        <small class="fs-7 text-muted">Months of
-          work</small>
-      </div>
-      <div class="work d-flex flex-column text-center">
-        <h6 class="fw-bolder">+{{data.project}}</h6>
-        <small class="fs-7 text-muted">Completed Project</small>
-      </div>
-      <div class="work d-flex flex-column text-center">
-        <h6 class="fw-bolder">{{data.certificate}}</h6>
-        <small class="fs-7 text-muted">Number of certificates</small>
-      </div>
-    </div>
+  <div class="contact flex mb-4">
+    <a href="../assets/Resume.pdf" class="btn btn-primary download" download>Download CV &nbsp;<i
+        class="ri-download-line"></i></a>
+    <a href="https://api.whatsapp.com/send/?phone={{data?.whatsappNo}}&text=Hello,%20I%20want%20to%20hire%20you!"
+      class="btn btn-secondary other"><i class="ri-whatsapp-line"></i></a>
+    <a class="btn btn-secondary other" href="mailto:{{data?.email}}"><i class="ri-mail-line"></i></a>
+  </div>
 
-    <div class="contact flex mb-4">
-      <a href="../assets/Resume.pdf" class="btn btn-primary download" download>Download CV &nbsp;<i
-          class="ri-download-line"></i></a>
-      <a href="https://api.whatsapp.com/send/?phone={{data?.whatsappNo}}&text=Hello,%20I%20want%20to%20hire%20you!"
-        class="btn btn-secondary other"><i class="ri-whatsapp-line"></i></a>
-      <a class="btn btn-secondary other" href="mailto:{{data?.email}}"><i class="ri-mail-line"></i></a>
-    </div>
-
-    <div class="btn-group switch" role="group" aria-label="Basic radio toggle button group">
-      <input type="radio" class="btn-check" name="btnradio" id="btnradio1" [(ngModel)]="switch" value="projects"
-        autocomplete="off" checked>
-      <label class="btn btn-light d-flex align-items-center justify-content-center" for="btnradio1"
-        style="width: 100px;">Projects</label>
-      &nbsp;&nbsp;
-      <input type="radio" class="btn-check" name="btnradio" id="btnradio2" [(ngModel)]="switch" value="skills"
-        autocomplete="off">
-      <label class="btn btn-light d-flex align-items-center justify-content-center" for="btnradio2"
-        style="width: 100px;">Skills</label>
-    </div>
+  <div class="btn-group switch" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio1" [(ngModel)]="switch" value="projects"
+      autocomplete="off" checked>
+    <label class="btn btn-light d-flex align-items-center justify-content-center" for="btnradio1"
+      style="width: 100px;">Projects</label>
+    &nbsp;&nbsp;
+    <input type="radio" class="btn-check" name="btnradio" id="btnradio2" [(ngModel)]="switch" value="skills"
+      autocomplete="off">
+    <label class="btn btn-light d-flex align-items-center justify-content-center" for="btnradio2"
+      style="width: 100px;">Skills</label>
+  </div>
 
 
 
-    <div *ngIf="switch=='skills'" class="container text-center d-flex justify-content-around skills">
-      <div class="text-start my-5">
-        <h6 class="text-center fw-bold mb-4">Front-end Developer </h6>
-        <div class="row">
-          <div class="col-md-6 d-flex mb-4" *ngFor="let skill of frontEndSkills">
-            <i class="ri-checkbox-circle-line"></i>
-            &nbsp;&nbsp;
-            <div>
-              <h6>{{skill.name}}</h6>
-              <small class="fs-6  text-muted">{{skill.proficiency}}</small>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="text-start my-5">
-        <h6 class="text-center fw-bold mb-4">Back-end Developer </h6>
-        <div class="row">
-          <div class="col-md-6 d-flex mb-4" *ngFor="let skill of backEndSkills">
-            <i class="ri-checkbox-circle-line"></i>
-            &nbsp;&nbsp;
-            <div>
-              <h6>{{skill.name}}</h6>
-              <small class="fs-6  text-muted">{{skill.proficiency}}</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div *ngIf="switch == 'projects'" class="container projects">
+  <div *ngIf="switch=='skills'" class="container text-center d-flex justify-content-around skills">
+    <div class="my-5">
+      <h6 class="text-center fw-bold mb-4">Front-end Developer </h6>
       <div class="row">
-        <div class="col-md-6" *ngFor="let project of projects; let i=index">
-          <div class="card mb-3">
-            <img src="../assets/images/projects/{{i+1}}.png" class="card-img-top" alt="...">
-            <article class="text-left mx-2">
-              <h4>{{project.title}}</h4>
-              <h6>{{project.desc}}</h6>
-            </article>
-            <div class="link text-center">
-              <a [href]="project.link"><i class="ri-link"></i></a>
-            </div>
+        <div class="col-md-6 justify-content-center text-start d-flex mb-4" *ngFor="let skill of frontEndSkills">
+          <i class="ri-checkbox-circle-line"></i>
+          &nbsp;&nbsp;
+          <div>
+            <h6>{{skill.name}}</h6>
+            <small class="fs-6  text-muted">{{skill.proficiency}}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="my-5">
+      <h6 class="text-center fw-bold mb-4">Back-end Developer </h6>
+      <div class="row">
+        <div class="col-md-6 justify-content-center text-start d-flex mb-4" *ngFor="let skill of backEndSkills">
+          <i class="ri-checkbox-circle-line"></i>
+          &nbsp;&nbsp;
+          <div>
+            <h6>{{skill.name}}</h6>
+            <small class="fs-6 text-muted">{{skill.proficiency}}</small>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <footer>
-    © Lavneesh Rajput. All rights reserved
-  </footer>
+
+
+  <div *ngIf="switch == 'projects'" class="container projects">
+    <div class="row">
+      <div class="col-md-6" *ngFor="let project of projects; let i=index">
+        <div class="card mb-3">
+          <img src="../assets/images/projects/{{i+1}}.png" class="card-img-top" alt="...">
+          <article class="text-left mx-2">
+            <h4>{{project.title}}</h4>
+            <h6>{{project.desc}}</h6>
+          </article>
+          <div class="link text-center">
+            <a [href]="project.link"><i class="ri-link"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  © Lavneesh Rajput. All rights reserved
+</footer>
