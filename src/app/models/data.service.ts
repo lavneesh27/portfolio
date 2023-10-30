@@ -56,7 +56,7 @@ export class DataService {
     work: 9,
     project: 10,
     certificate: 8,
-    whatsappNo: '8949254840',
+    whatsappNo: '+918949254840',
     email: 'lavirajput376@gmail.com',
     linkedIn: 'https://www.linkedin.com/in/lavneesh-rajput-59165b1aa/',
     github: 'https://github.com/lavneesh27',
