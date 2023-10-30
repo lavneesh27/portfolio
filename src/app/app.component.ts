@@ -23,6 +23,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
   }
   toggleDark() {
-    this.isDark = !this.isDark;
+    // this.cardHoverStates[index] = !this.cardHoverStates[index];
   }
 }

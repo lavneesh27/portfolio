@@ -55,7 +55,7 @@
 
 
 
-  <div *ngIf="switch=='skills'" class="container text-center d-flex justify-content-around skills">
+  <div *ngIf="switch=='skills'" class="container text-center d-flex justify-content-around skills w-75">
     <div class="my-5">
       <h6 class="text-center fw-bold mb-4">Front-end Developer </h6>
       <div class="row">
@@ -88,7 +88,7 @@
 
 
 
-  <div *ngIf="switch == 'projects'" class="container projects">
+  <div *ngIf="switch == 'projects'" class="container projects w-75">
     <div class="row">
       <div class="col-md-6 d-flex justify-content-center" *ngFor="let project of projects; let i=index">
         <div class="card mb-3">

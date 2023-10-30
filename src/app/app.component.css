@@ -204,11 +204,11 @@
     transition: all 0.5s ease;
 }
 
-.projects:hover article {
+.projects .card:hover article {
 	transform: translate(2px, -69px);
 }
 
-.projects:hover img {
+.projects .card:hover img {
 	opacity: 0.6;
 	transform: scale(1.1);
 }
@@ -216,7 +216,6 @@
 .projects .card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-   
   }
 
   .projects .link{
@@ -233,7 +232,7 @@
     cursor: pointer;
   }
 
-  .projects:hover .link{
+  .projects .card:hover .link{
     transform: translate(0px, 0px);
     opacity: 1;
   }
