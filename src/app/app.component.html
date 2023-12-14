@@ -9,7 +9,7 @@
     <img src="../assets/images/avatar.png" alt="">
   </div>
   <h4 class="fw-bold">{{data.name}}</h4>
-  <small class="fw-bolder opacity-50 mb-4">{{data.designation}}</small>
+  <small class="opacity-50 mb-4">{{data.designation}}</small>
 
   <div class="social d-flex mb-4">
     <a id="li" href="{{data?.linkedIn}}"><i class="ri-linkedin-box-line fs-5"></i></a>
@@ -19,16 +19,16 @@
 
   <div class="exp d-flex mb-4">
     <div class="work d-flex flex-column text-center">
-      <h6 class="fw-bolder">{{data.work}}</h6>
+      <h6 class="">{{data.work}}</h6>
       <small class="fs-7 text-muted">Months of
         work</small>
     </div>
     <div class="work d-flex flex-column text-center">
-      <h6 class="fw-bolder">+{{data.project}}</h6>
+      <h6 class="">+{{data.project}}</h6>
       <small class="fs-7 text-muted">Completed Project</small>
     </div>
     <div class="work d-flex flex-column text-center">
-      <h6 class="fw-bolder">{{data.certificate}}</h6>
+      <h6 class="">{{data.certificate}}</h6>
       <small class="fs-7 text-muted">Number of certificates</small>
     </div>
   </div>
@@ -105,6 +105,7 @@
     </div>
   </div>
 </div>
+<app-cursor></app-cursor>
 <footer>
   © Lavneesh Rajput. All rights reserved
 </footer>

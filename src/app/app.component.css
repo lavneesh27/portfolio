@@ -168,31 +168,32 @@
     height: 200px;
     /* width: 500px; */
     margin: 10px;
-    color: black;
+    color: white;
     overflow: hidden;
     border-radius: 15px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
     transition: transform 0.2s;
+    background: black;
     
 }
 .projects img{
     height: 100%;   
     z-index: 1;
-    -webkit-mask-image: linear-gradient(black, transparent);
-    mask-image: linear-gradient(black, transparent);
     transition: all 2s ease;
 }
 
 .projects article{
     z-index: 1;
+    display: none;
     position: absolute;
 	bottom: 0;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 }
 
 .projects .card:hover article {
 	transform: translate(2px, -69px);
+    display: block;
 }
 
 .projects .card:hover img {
@@ -215,7 +216,7 @@
 	z-index: 1;
     opacity: 0;
 	transform: translate(0px, 70px);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
     cursor: pointer;
   }
 
@@ -262,4 +263,13 @@ footer{
     font-size: smaller;
     opacity: 50%;
     width: 100%;
+}
+.div:hover ~ .cursor{
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: #c6c6c6;
+    opacity: .5;
+}
+
+.div:hover ~ .cursor2{
+    opacity: 0;
 }
