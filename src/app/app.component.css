@@ -4,8 +4,8 @@
 *{
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    cursor: none;
 }
-
 
 .img-container{
     border: 3px solid rgb(38,54,115);
