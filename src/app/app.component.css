@@ -4,7 +4,7 @@
 *{
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-    cursor: none;
+    /* cursor: none; */
 }
 
 .img-container{
@@ -199,6 +199,7 @@
 .projects .card:hover img {
 	opacity: 0.6;
 	transform: scale(1.1);
+    transition: cubic-bezier(1, 0, 0, 1);
 }
 
 .projects .card:hover {
@@ -272,4 +273,7 @@ footer{
 
 .div:hover ~ .cursor2{
     opacity: 0;
+}
+.card{
+    background: transparent;
 }
